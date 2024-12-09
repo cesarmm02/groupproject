@@ -59,11 +59,13 @@ def draw_face3(canvas, cx, cy, size):
 def draw_face4(canvas, cx, cy, size):
     #draw the shape
     half_size = size / 2
-    canvas.draw_polygon([(cx, cy - half_size),
-                        (cx - half_size, cy + half_size), 
-                        (cx + half_size, cy + half_size)],
-                        2, "Blue", "blue") #blue triangle
-    
+    canvas.draw_circle((width/2, height/2), width/2 - 50, 10, "#FFECA1", "#FFECA1")
+        canvas.draw_circle((209, 215), 41, 2, "black", "black")
+        canvas.draw_line((width - width/4, height/2 - 134),(width - width/3 - 50, height/2 - 125), 5, "Black")
+        canvas.draw_line((width - width/4, height/2 - 200),(width - width/3 - 50, height/2 - 125), 5, "Black")
+        canvas.draw_line((width - width/4, height/1.2 - 150),(width - width/1.9 - 50, height/1.2 - 150), 5, "Black")
+        canvas.draw_line((width - width/1.5, height/1.3 - 150),(width - width/1.9 - 50, height/1.2 - 150), 5, "Black")
+        canvas.draw_line((width - width/4, height/1.2 - 150),(width - width/7 - 50, height/1.4 - 150), 5, "Black") 
 def draw(canvas):
     quadrant_width = frame_width/2
     quadrant_height = frame_height/2
