@@ -72,7 +72,7 @@ def draw(canvas):
     if show_face3:
             draw_face3(canvas, quadrant_width / 2, frame_height - quadrant_height * 1.5, 100) #face1 in bottom left
     if show_face4:
-            draw_face4(canvas, quadrant_width * 1.5, frame_height - quadrant_height * 1.5, 100) #face1 in bottom left
+            draw_face4(canvas, quadrant_width *1.5 , frame_height - quadrant_height / 2, 100) #face1 in bottom left
             
             
 def create_frame():
