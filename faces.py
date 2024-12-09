@@ -41,14 +41,15 @@ def draw_face1(canvas, cx, cy, size):
 
 def draw_face2(canvas, cx, cy, size):
     #draw the shape
-   canvas.draw_circle((width/2, height/2), width/2 - 50, 10, "Yellow", "Yellow")
-        # Eyes
-        canvas.draw_circle([width/2 - 100, height/2 - 100], 30, 2, "Black", "White")
-        canvas.draw_circle([width/2 + 100, height/2 - 100], 30, 2, "Black", "White")
-        # Mouth (Confused)
-        canvas.draw_polygon([(width/2 - 100, height/2 + 50), (width/2 - 50, height/2 + 80), 
-                             (width/2 + 50, height/2 + 80), (width/2 + 100, height/2 + 50)], 5, "Black", "White")
-
+   canvas.draw_circle((width/2, height/2), width/2 - 50, 10, "#FA8072", "#FA8072")
+        canvas.draw_circle([width/2.75, height/2 - 100], 10, 10, "Black", "White")
+        canvas.draw_circle([width - width/2.75, height/2 - 100], 10, 10, "Black", "White")
+        canvas.draw_line((width/3, height/2 - 150),(width/3 + 50, height/2 - 125), 5, "Black")
+        canvas.draw_line((width - width/3, height/2 - 150),(width - width/3 - 50, height/2 - 125), 5, "Black")
+        canvas.draw_polygon([(width/2, height - height/4), (width/2 - 50, height - height/4 + 25), 
+                             (width/2 - 10, height - height/4 - 30), (width/2 + 10, height - height/4 - 30), 
+                             (width/2 + 50, height - height/4 + 25)], 10, "Black", "White")
+        canvas.draw_line((width/2 - 30, height - height/4 - 10), (width/2 + 30, height - height/4 - 10), 5, "Black")
 def draw_face3(canvas, cx, cy, size):
     #draw the shape
     half_size = size / 2
