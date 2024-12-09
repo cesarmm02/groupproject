@@ -51,7 +51,6 @@ def draw_face2(canvas, cx, cy, size):
     canvas.draw_line((cx/2 - 30, cy - cy/4 - 10), (cx/2 + 30, cy - cy/4 - 10),2.5, "Black")
 def draw_face3(canvas, cx, cy, size):
     #draw the shape
-    import simplegui
 # Face outline
     canvas.draw_circle((width / 2, height / 2), width / 2 - 50, 10, "#FA8072", "#FA8872")  
  # Left eye
