@@ -40,16 +40,15 @@ def draw_face1(canvas, cx, cy, size):
 
 
 def draw_face2(canvas, cx, cy, size):
-    #draw the shape
-   canvas.draw_circle((width/2, height/2), width/2 - 50, 10, "#FA8072", "#FA8072")
-        canvas.draw_circle([width/2.75, height/2 - 100], 10, 10, "Black", "White")
-        canvas.draw_circle([width - width/2.75, height/2 - 100], 10, 10, "Black", "White")
-        canvas.draw_line((width/3, height/2 - 150),(width/3 + 50, height/2 - 125), 5, "Black")
-        canvas.draw_line((width - width/3, height/2 - 150),(width - width/3 - 50, height/2 - 125), 5, "Black")
-        canvas.draw_polygon([(width/2, height - height/4), (width/2 - 50, height - height/4 + 25), 
-                             (width/2 - 10, height - height/4 - 30), (width/2 + 10, height - height/4 - 30), 
-                             (width/2 + 50, height - height/4 + 25)], 10, "Black", "White")
-        canvas.draw_line((width/2 - 30, height - height/4 - 10), (width/2 + 30, height - height/4 - 10), 5, "Black")
+    canvas.draw_circle((cx/2, cy/2), cx/2 - 50, 5, "#FA8072", "#FA8072")
+    canvas.draw_circle([cx/2.75, cy/2 - 100], 10, 5, "Black", "White")
+    canvas.draw_circle([cx - cx/2.75, cy/2 - 100], 10, 5, "Black", "White")
+    canvas.draw_line((cx/3, cy/2 - 150),(cx/3 + 50, cy/2 - 125), 2.5, "Black")
+    canvas.draw_line((cx - cx/3, cy/2 - 150),(cx - cx/3 - 50, cy/2 - 125), 2.5, "Black")
+    canvas.draw_polygon([(cx/2, cy - cy/4), (cx/2 - 50, cy - cy/4 + 25), 
+                        (cx/2 - 10, cy - cy/4 - 30), (cx/2 + 10, cy - cy/4 - 30), 
+                        (cx/2 + 50, cy - cy/4 + 25)], 5, "Black", "White")
+    canvas.draw_line((cx/2 - 30, cy - cy/4 - 10), (cx/2 + 30, cy - cy/4 - 10),2.5, "Black")
 def draw_face3(canvas, cx, cy, size):
     #draw the shape
     half_size = size / 2
@@ -81,8 +80,8 @@ def draw(canvas):
             
 def create_frame():
     global frame
-    frame = simplegui.create_frame("CFU #17", frame_width, frame_height)
-    frame.set_canvas_background("green")
+    frame = simplegui.create_frame("Four Faces", frame_width, frame_height)
+    frame.set_canvas_background("white")
     frame.add_button("Bored", toggle_face1, 150)
     frame.set_draw_handler(draw)
     frame.start()
