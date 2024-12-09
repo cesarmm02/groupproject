@@ -41,11 +41,14 @@ def draw_face1(canvas, cx, cy, size):
 
 def draw_face2(canvas, cx, cy, size):
     #draw the shape
-    half_size = size / 2
-    canvas.draw_polygon([(cx, cy - half_size),
-                        (cx - half_size, cy + half_size), 
-                        (cx + half_size, cy + half_size)],
-                        2, "Blue", "blue") #blue triangle
+   canvas.draw_circle((width/2, height/2), width/2 - 50, 10, "Yellow", "Yellow")
+        # Eyes
+        canvas.draw_circle([width/2 - 100, height/2 - 100], 30, 2, "Black", "White")
+        canvas.draw_circle([width/2 + 100, height/2 - 100], 30, 2, "Black", "White")
+        # Mouth (Confused)
+        canvas.draw_polygon([(width/2 - 100, height/2 + 50), (width/2 - 50, height/2 + 80), 
+                             (width/2 + 50, height/2 + 80), (width/2 + 100, height/2 + 50)], 5, "Black", "White")
+
 def draw_face3(canvas, cx, cy, size):
     #draw the shape
     half_size = size / 2
