@@ -51,27 +51,36 @@ def draw_face2(canvas, cx, cy, size):
     canvas.draw_line((cx/2 - 30, cy - cy/4 - 10), (cx/2 + 30, cy - cy/4 - 10),2.5, "Black")
 def draw_face3(canvas, cx, cy, size):
     #draw the shape
-# Face outline
-    canvas.draw_circle((width / 2, height / 2), width / 2 - 50, 10, "#FA8072", "#FA8872")  
- # Left eye
-    canvas.draw_circle([width / 2.75, height / 2 - 100], 10, 10, "Black", "White")      
-# Right eye
-    canvas.draw_circle([width - width / 2.75, height / 2 - 100], 10, 10, "Black", "White")  
-# Left eyebrow
-    canvas.draw_line((width / 3, height / 2 - 150), (width / 3 + 50, height / 2 - 125), 5, "Black")  
- # Right eyebrow
-    canvas.draw_line((width - width / 3, height / 2 - 150), (width - width / 3 - 50, height / 2 - 125), 5, "Black") 
- # Mouth outline
-    canvas.draw_polygon([(width / 2, height - height / 4), 
-                     (width / 2 - 50, height - height / 4 + 25),
-                     (width / 2 - 10, height - height / 4 - 30),
-                     (width / 2 + 10, height - height / 4 - 30),
-                     (width / 2 + 50, height - height / 4 + 25)], 
-                    10, "Black", "White") 
-# Smile line
-    canvas.draw_line((width / 2 - 30, height - height / 4 - 10), 
-                 (width / 2 + 30, height - height / 4 - 18), 
-                 5, "Black")  
+# Function to draw the happy face
+def draw_face1(canvas, cx, cy, size):
+    # Face outline (salmon-colored circle)
+    canvas.draw_circle((cx, cy), size, 10, "#FA8072", "#FA8872")
+    
+    # Left eye (white circle with black border)
+    canvas.draw_circle((cx - size / 4, cy - size / 4), size / 10, 2, "Black", "White")
+    
+    # Right eye (white circle with black border)
+    canvas.draw_circle((cx + size / 4, cy - size / 4), size / 10, 2, "Black", "White")
+    
+    # Left eyebrow (curved upward for a happy expression)
+    canvas.draw_line((cx - size / 3, cy - size / 3), 
+                     (cx - size / 5, cy - size / 3 - 10), 3, "Black")
+    
+    # Right eyebrow (curved upward for a happy expression)
+    canvas.draw_line((cx + size / 3, cy - size / 3), 
+                     (cx + size / 5, cy - size / 3 - 10), 3, "Black")
+    
+    # Mouth outline (smiling curve with a polygon for the lips)
+    canvas.draw_polygon([(cx - size / 4, cy + size / 4),
+                         (cx - size / 8, cy + size / 3),
+                         (cx + size / 8, cy + size / 3),
+                         (cx + size / 4, cy + size / 4)],
+                        2, "Black", "White")
+    
+    # Smile line (adding a gentle smile curve under the lips)
+    canvas.draw_line((cx - size / 6, cy + size / 4 + 5), 
+                     (cx + size / 6, cy + size / 4 + 5), 3, "Black")
+
 
 
 def draw_face4(canvas, cx, cy, size):
